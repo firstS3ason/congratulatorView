@@ -1,0 +1,10 @@
+<div class = "list"  >  
+    <div *ngFor = "let item of users |async" class="item"  >
+      <h1>{{item.sfl}}</h1> 
+      <h2>{{item.id }}</h2> 
+      <h3>{{item.birthDay}}</h3>
+      <div class="photo">
+
+      <img [src]="'data:image/png;base64,' + item.photo" alt ="Тут должно быть фото, но его нет :с"/>  
+      </div>
+  </div>

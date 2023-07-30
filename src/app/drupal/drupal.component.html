@@ -1,0 +1,32 @@
+<div class="formCreate">
+  <p>Добавить запись</p>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+      <div class="item">
+      <label for="name">
+          Имя 
+        </label>
+        <input id="name" type="text" formControlName="name">
+      </div>
+
+      <div>
+        <label>Почта</label>
+        <input id="mail" type="text" formControlName="mail">
+      </div>
+
+      <div  class="item">
+          <label for="date">
+              Дата в формате mm/dd/yy
+            </label>
+            <input id="date" type="text" formControlName="date">
+          </div>
+
+        <div class="item">
+          <input 
+          type ="file"
+          (change)="onFileChange($event)" >
+        </div>
+
+        <button class="button" type="submit" 
+        style="background-color:azure; border-color: azure; margin: 10px;">Добавить </button>
+  </form>
+  </div>
